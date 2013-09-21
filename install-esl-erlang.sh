@@ -25,9 +25,9 @@ equivs-build $1
 
 erlpkgs="erlang-abi-13.a erlang-appmon erlang-asn1 erlang-base erlang-base-hipe erlang-common-test erlang-corba erlang-crypto erlang-debugger erlang-dev erlang-dialyzer erlang-doc erlang-doc-html erlang-docbuilder erlang-edoc erlang-erl-docgen erlang-esdl erlang-esdl-dev erlang-esdl-doc erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-ic-java erlang-inets erlang-inviso erlang-jinterface erlang-manpages erlang-megaco erlang-mnesia erlang-nox erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept erlang-pman erlang-public-key erlang-reltool erlang-runtime-tools erlang-snmp erlang-src erlang-ssh erlang-ssl erlang-syntax-tools erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool erlang-wx erlang-x11 erlang-xmerl erlang-yaws"
 ## Argh, can't just make them all, esl-erlang Conflicts: with them.
-for debiab_package in erlang-nox
+for debian_package in erlang-nox
 do
-    make_dummy_package $debiab_package
+    make_dummy_package $debian_package
 done
 
 dpkg -i ./*.deb
